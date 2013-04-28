@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "jQuery.IME Chrome",
+  "description": "This extension demonstrates a 'browser action' with kittens.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html"
+  },
+  "permissions": [
+    
+  ],
+  "content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' 'unsafe-eval'"
+}
