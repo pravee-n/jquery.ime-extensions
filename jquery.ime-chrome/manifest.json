@@ -9,16 +9,19 @@
 		"default_icon": "icon.png",
 		"default_popup": "index.html"
 	},
-	"permissions": [
-
-	],
-	"background": { 
-		"page": "background.html"
+	"background": {
+		"scripts": [
+            "js/background.js"
+        ]
 	},
 	"options_page": "options.html",
 	"content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' 'unsafe-eval'",
 	"content_scripts": [ {
-		"js": [ "js/jquery.js", "js/jquery.ime.js", "js/jquery.ime.selector.js", "js/jquery.ime.preferences.js", "js/jquery.ime.inputmethods.js", "js/main.js" ],
+		"js": [ "js/jquery.js", "js/jquery.ime.js", "js/jquery.ime.selector.js", "js/jquery.ime.preferences.js", "js/jquery.ime.inputmethods.js", "js/main.js", 
+				"rules/hi/hi-transliteration.js",
+				"rules/de/de.js",
+				"rules/el/el-kbd.js"
+			],
 		"css": [ "css/jquery.ime.css"],
 		"matches": [ "http://*/*", "https://*/*"]
 	}]
