@@ -1,3 +1,4 @@
 $(document).ready(function(){
-	$( 'textarea' ).ime();
+	$( 'textarea, input[type=text]' ).ime();
+	// $( 'input[type=text]' ).ime();
 });
