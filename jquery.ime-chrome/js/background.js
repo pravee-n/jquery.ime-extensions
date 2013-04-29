@@ -1,3 +1,29 @@
+// console.log(chrome);
+
+// chrome.browserAction.onClicked.addListener(function(tab) {
+//   chrome.tabs.executeScript(null,
+//                            {code:"document.body.bgColor='red'"});
+// });
+
+// chrome.runtime.onConnect.addListener(function(port) {
+//   port.onMessage.addListener(function(msg) {
+//     port.postMessage({counter: msg.counter+1});
+//   });
+// });
+
+// chrome.runtime.onMessage.addListener(
+//     function(request, sender, sendResponse) {
+//     console.log(sender.tab ?
+//                 "from a content script:" + sender.tab.url :
+//                 "from the extension");
+//     if (request.greeting == "hello")
+//       sendResponse({farewell: "goodbye"});
+// });
+
+// chrome.browserAction.onClicked.addListener(function() {
+    
+// });
+
 // document.addEventListener("DOMContentLoaded", function () {
 //     //Fetch all inactive completly loaded tabs or use your own query
 //     chrome.tabs.query({
