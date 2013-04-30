@@ -6,6 +6,11 @@ used in Wikimedia projects, a.k.a. Narayam.
 
 This project aims at porting jQuery.IME to Firefox andd Chrome extension.
 
+Current progress of the project:
+* Working Chrome extension implemented
+* On demand injection of scripts implemented (Input method for a language 
+is injected on the page only when the user selects that particular language)
+
 Installation on Google Chrome
 =============================
 
@@ -21,11 +26,7 @@ https://github.com/pravee-n/prototype.jquery.ime.git
 5. Open the directory where you cloned the source code. Navigate to the jQuery.ime-chrome directory and open it to install the extension
 
 
-jQuery.IME for chrome is now installed.
-
-Try it out on any textarea or input box on any website.
-
-For now only a few languages have been implemented.
-
-You can try using Hindi, Greek.
+jQuery.IME for chrome is now installed.<br>
+Try it out on any textarea or input box on any website. <br>
+Try refreshing the page once if jQuery.IME extension is not loaded on a input field or a textarea.
 
