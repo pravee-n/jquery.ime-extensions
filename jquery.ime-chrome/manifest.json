@@ -14,44 +14,19 @@
         ]
 	},
 	"permissions": [
-	  "tabs", "http://*/*"
+	  "tabs", "http://*/*", "https://*/*"
 	],
 	"options_page": "options.html",
 	"content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' 'unsafe-eval'",
 	"content_scripts": [ {
-		"js": [ "js/jquery.js", "js/jquery.ime.js", "js/jquery.ime.selector.js", "js/jquery.ime.preferences.js", "js/jquery.ime.inputmethods.js", "js/main.js", 
-				"rules/hi/hi-transliteration.js",
-				"rules/hi/hi-bolnagri.js",
-				"rules/hi/hi-inscript.js",
-				"rules/hi/hi-inscript2.js",
-				"rules/hi/hi-phonetic.js",
-				"rules/am/am-transliteration.js",
-				"rules/ar/ar-kbd.js",
-				"rules/be/be-kbd.js",
-				"rules/be/be-latin.js",
-				"rules/be/be-transliteration.js",
-				"rules/ber/ber-tfng.js",
-				"rules/brx/brx-inscript.js",
-				"rules/brx/brx-inscript2.js",
-				"rules/cyrl/cyrl-palochka.js",
-				"rules/da/da-normforms.js",
-				"rules/doi/doi-inscript2.js",
-				"rules/fi/fi-transliteration.js",
-				"rules/fo/fo-normforms.js",
-				"rules/fonipa/ipa-sil.js",
-				"rules/he/he-kbd.js",
-				"rules/he/he-standard-2012.js",
-				"rules/he/he-standard-2012-extonly.js",
-				"rules/hr/hr-kbd.js",
-				"rules/hy/hy-kbd.js",
-				"rules/is/is-normforms.js",
-				"rules/jv/jv-transliteration.js",
-				"rules/ka/ka-kbd.js",
-				"rules/ka/ka-transliteration.js",
-				"rules/de/de.js",
-				"rules/el/el-kbd.js"
+		"js": [ "js/jquery.js", 
+				"js/jquery.ime.js", 
+				"js/jquery.ime.selector.js", 
+				"js/jquery.ime.preferences.js", 
+				"js/jquery.ime.inputmethods.js", 
+				"js/main.js"
 			],
 		"css": [ "css/jquery.ime.css"],
-		"matches": [ "http://*/*", "https://*/*"]
+		"matches": ["http://*/*", "https://*/*"]
 	}]
 }

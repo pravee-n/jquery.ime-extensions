@@ -202,30 +202,35 @@
 			var ime = this,
 				dependency;
 
-			if ( $.ime.inputmethods[name] ) {
-				if ( callback ) {
-					callback.call( ime );
+			var runtimeOrExtension = chrome.runtime && chrome.runtime.sendMessage ? 'runtime' : 'extension';
+			chrome[runtimeOrExtension].sendMessage( {fileToInject: $.ime.sources[name].source}, function(response) {
+
+				if ( $.ime.inputmethods[name] ) {
+					if ( callback ) {
+						callback.call( ime );
+					}
+
+					return true;
 				}
 
-				return true;
-			}
-
-			dependency = $.ime.sources[name].depends;
-			if ( dependency ) {
-				this.load( dependency ) ;
-			}
-
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				debug( name + ' loaded' );
-
-				if ( callback ) {
-					callback.call( ime );
+				dependency = $.ime.sources[name].depends;
+				if ( dependency ) {
+					this.load( dependency ) ;
 				}
-			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+
+				$.ajax( {
+					url: ime.options.imePath + $.ime.sources[name].source,
+					dataType: 'script'
+				} ).done( function () {
+					debug( name + ' loaded' );
+
+					if ( callback ) {
+						callback.call( ime );
+					}
+				} ).fail( function ( jqxhr, settings, exception ) {
+					debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+				} );
+				
 			} );
 		},
 
