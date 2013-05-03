@@ -28,5 +28,9 @@
 			],
 		"css": [ "css/jquery.ime.css"],
 		"matches": ["http://*/*", "https://*/*"]
-	}]
+	}],
+	"web_accessible_resources": [
+	    "images/ime-active.png",
+	    "images/tick.png"
+  	]
 }

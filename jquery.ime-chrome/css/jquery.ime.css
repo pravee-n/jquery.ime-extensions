@@ -2,9 +2,9 @@
 	position: absolute;
 	/* Fix rgba fallback bug - http://css-tricks.com/ie-background-rgb-bug */
 	/* @embed */
-	background: url('../images/ime-active.png') no-repeat left 3px center #fff;
+	background: url('chrome-extension://cncjgjifhponphefahnbeaacmihnoppk/images/ime-active.png') no-repeat left 3px center #fff;
 	/* @embed */
-	background: url('../images/ime-active.png') no-repeat left 3px center rgba(255,255,255,0.75);
+	background: url('chrome-extension://cncjgjifhponphefahnbeaacmihnoppk/images/ime-active.png') no-repeat left 3px center rgba(255,255,255,0.75);
 	cursor: pointer;
 	height: 15px;
 	font-size: small;
@@ -173,7 +173,7 @@ span.ime-disable-shortcut {
 
 .imeselector-menu .checked {
 	/* @embed */
-	background: url(../images/tick.png) 4px center no-repeat;
+	background: url(chrome-extension://cncjgjifhponphefahnbeaacmihnoppk/images/tick.png) 4px center no-repeat;
 }
 
 .imeselector-menu .ime-help-link {
