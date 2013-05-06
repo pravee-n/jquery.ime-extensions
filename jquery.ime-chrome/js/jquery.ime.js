@@ -203,7 +203,7 @@
 				dependency;
 
 			var runtimeOrExtension = chrome.runtime && chrome.runtime.sendMessage ? 'runtime' : 'extension';
-			chrome[runtimeOrExtension].sendMessage( {fileToInject: $.ime.sources[name].source}, function(response) {
+			chrome[runtimeOrExtension].sendMessage( {fileToInject: $.ime.sources[name].source}, function ( response ) {
 
 				if ( $.ime.inputmethods[name] ) {
 					if ( callback ) {
