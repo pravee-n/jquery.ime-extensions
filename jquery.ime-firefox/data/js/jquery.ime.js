@@ -202,33 +202,38 @@
 			var ime = this,
 				dependency;
 
+			var imeSource = $.ime.sources[name].source;
+			self.port.emit( "injectScript", imeSource );
+			self.port.on( "scriptInjected", function ( response ) {
+				// alert(response);
+				if ( response == imeSource ) {
+					if ( $.ime.inputmethods[name] ) {
+						if ( callback ) {
+							callback.call( ime );
+						}
 
-			if ( $.ime.inputmethods[name] ) {
-				if ( callback ) {
-					callback.call( ime );
+						return true;
+					}
+
+					dependency = $.ime.sources[name].depends;
+					if ( dependency ) {
+						this.load( dependency ) ;
+					}
+
+					$.ajax( {
+						url: ime.options.imePath + $.ime.sources[name].source,
+						dataType: 'script'
+					} ).done( function () {
+						debug( name + ' loaded' );
+
+						if ( callback ) {
+							callback.call( ime );
+						}
+					} ).fail( function ( jqxhr, settings, exception ) {
+						debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+					} );
 				}
-
-				return true;
-			}
-
-			dependency = $.ime.sources[name].depends;
-			if ( dependency ) {
-				this.load( dependency ) ;
-			}
-
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				debug( name + ' loaded' );
-
-				if ( callback ) {
-					callback.call( ime );
-				}
-			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
 			} );
-
 		},
 
 		// Returns an array [start, end] of the beginning
