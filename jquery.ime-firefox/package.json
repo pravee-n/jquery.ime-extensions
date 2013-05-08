@@ -1,0 +1,9 @@
+{
+  "name": "jquery-ime-firefox",
+  "fullName": "jquery.ime-firefox",
+  "id": "jid1-vGTJ8zxEfBzOCw",
+  "description": "A prototype jQuery.IME extension for Firefox.",
+  "author": "Praveen",
+  "license": "MPL 2.0",
+  "version": "0.1"
+}
