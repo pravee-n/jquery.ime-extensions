@@ -10,17 +10,16 @@ pageMod.PageMod({
 							self.data.url("js/jquery.ime.selector.js"),
 							self.data.url("js/jquery.ime.preferences.js"),
 							self.data.url("js/jquery.ime.inputmethods.js"),
-							self.data.url("js/invoke.jquery.ime.js")
-							// self.data.url("rules/hi/hi-transliteration.js")
-					   ],
-	onAttach: function(worker) {
-		worker.port.on( "injectScript", function ( imeSource ) {
-			// pageMod.PageMod.contentScriptFile = self.data.url("js/test.js");
-			worker = tabs.activeTab.attach({
-		    	contentScriptFile: [ self.data.url(imeSource)]
-		    });
-			worker.port.emit( "scriptInjected", imeSource );
-		} );
-	},	
-	// attachTo: ["existing"]
+							self.data.url("js/invoke.jquery.ime.js"),
+							self.data.url("rules/hi/hi-transliteration.js"),
+							self.data.url("rules/gu/gu-transliteration.js")
+					   ]
+	// onAttach: function(worker) {
+	// 	worker.port.on( "injectScript", function ( imeSource ) {
+	// 		worker = tabs.activeTab.attach({
+	// 			contentScriptFile: [ self.data.url(imeSource)]
+	// 		});
+	// 		worker.port.emit( "scriptInjected",  );
+	// 	} );
+	// },	
 });
