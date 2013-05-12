@@ -24,9 +24,9 @@ div.imeselector:hover {
 }
 
 .imeselector a {
-	text-decoration: none;
+	text-decoration: none !important;
 	outline: none;
-	color: #222222;
+	color: #222222 !important;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
@@ -74,9 +74,9 @@ span.ime-disable-shortcut {
 	text-align: left;
 	font-size: larger;
 	font-weight: normal;
-	padding-bottom: 5px;
-	padding-left: 20px;
-	padding-top: 9px;
+	padding-bottom: 5px !important;
+	padding-left: 20px !important;
+	padding-top: 9px !important;
 	margin: 0 0 1px;
 }
 

@@ -24,9 +24,9 @@ div.imeselector:hover {
 }
 
 .imeselector a {
-	text-decoration: none;
+	text-decoration: none !important;
 	outline: none;
-	color: #222222;
+	color: #222222 !important;
 	line-height: 1em;
 	padding-top: 4px;
 	padding-bottom: 4px;
