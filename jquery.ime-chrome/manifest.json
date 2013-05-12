@@ -25,7 +25,7 @@
 				"js/jquery.ime.selector.js", 
 				"js/jquery.ime.preferences.js", 
 				"js/jquery.ime.inputmethods.js", 
-				"js/main.js"
+				"js/invoke.jquery.ime.js"
 			],
 		"css": [ "css/jquery.ime.css"],
 		"matches": ["http://*/*", "https://*/*"]
