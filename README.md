@@ -10,10 +10,11 @@ Current progress of the project:
 
 * Chrome Extension
 	* Working extension implemented
-	* On demand injection of scripts implemented (Input method for a language is injected on the page only when the user selects that particular language)
+	* On demand injection of input method scripts implemented (Input method for a language is injected on the page only when the user selects that particular language)
 
 * Firefox Extension
 	* Working extension implemented
+	* On demand injection of input method scripts implemented
 
 Get the source code
 -------------------
@@ -34,7 +35,7 @@ Installation on Google Chrome
 
 jQuery.IME for chrome is now installed.<br>
 Try it out on any textarea or input box on any website. <br>
-Try refreshing the page once if jQuery.IME extension is not loaded on a input field or a textarea.
+Try refreshing the page once if jQuery.IME extension is not loaded on a input field or a textarea on a webpage.
 
 Installation on Firefox
 -----------------------
@@ -44,4 +45,4 @@ Installation on Firefox
 4. Open the directory where you cloned the source code. Navigate to the jquery.ime-firefox directory and open jquery-ime-firefox.xpi to install the extension
 
 jQuery.IME for firefox is now installed.<br>
-Currently only Hindi, Gujarati, Deutsch and Urdu languages are supported for firefox extension.
+Try refreshing the page once if jQuery.IME extension is not loaded on a input field or a textarea on a webpage.
