@@ -9,12 +9,12 @@ This project aims at porting jQuery.IME to Firefox andd Chrome extension.
 Current progress of the project:
 
 * Chrome Extension
-	* Working extension implemented
-	* On demand injection of input method scripts implemented (Input method for a language is injected on the page only when the user selects that particular language)
+	* Prototype extension implemented
+	* On demand loading of input methods implemented (Input method for a language is injected on the page only when the user selects that particular language)
 
 * Firefox Extension
-	* Working extension implemented
-	* On demand injection of input method scripts implemented
+	* Prototype extension implemented
+	* On demand loading of input methods implemented
 
 Get the source code
 -------------------
