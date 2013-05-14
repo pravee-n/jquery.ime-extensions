@@ -215,19 +215,26 @@
 				this.load( dependency ) ;
 			}
 
-			$.ajax( {
-				url: ime.options.imePath + $.ime.sources[name].source,
-				dataType: 'script'
-			} ).done( function () {
-				debug( name + ' loaded' );
+			// notify addon script to inject required file
+			self.port.emit( "injectScript", $.ime.sources[name].source );
 
-				if ( callback ) {
-					callback.call( ime );
+			// Callback function from addon script to notify whether
+			// script injected successfully or not.
+			self.port.on( "injectSciptCallback", function ( response ) {
+				if ( response.injected ) {
+					// script injected successfully
+					eval( response.scriptToInject );
+					debug( name + ' loaded' );
+
+					if ( callback ) {
+						callback.call( ime );
+					}
+				} else {
+					// some error occured while injecting script
+					debug( 'Error in loading inputmethod ' + name + ' Error: ' + response.errorMessage );
 				}
-			} ).fail( function ( jqxhr, settings, exception ) {
-				debug( 'Error in loading inputmethod ' + name + ' Exception: ' + exception );
+				
 			} );
-			
 		},
 
 		// Returns an array [start, end] of the beginning
