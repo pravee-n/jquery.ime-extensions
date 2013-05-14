@@ -21,10 +21,6 @@ pageMod.PageMod({
 							data.url("js/jquery.ime.preferences.js"),
 							data.url("js/jquery.ime.inputmethods.js"),
 							data.url("js/invoke.jquery.ime.js")
-							// data.url("rules/hi/hi-transliteration.js"),
-							// data.url("rules/gu/gu-transliteration.js"),
-							// data.url("rules/de/de.js"),
-							// data.url("rules/ur/ur-transliteration.js")
 	],
 
 	onAttach: function(worker) {
