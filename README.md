@@ -1,4 +1,4 @@
-prototype.jquery.ime
+jquery.ime-extensions
 ====================
 
 jQuery.IME is an input method editor that currently supports more than 150 input methods. This is the jQuery version of the input method tool
